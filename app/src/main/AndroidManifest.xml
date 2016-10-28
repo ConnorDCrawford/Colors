@@ -9,16 +9,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PaletteActivity"
-            android:label="Palette" >
-
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CanvasActivity"
-            android:label="Canvas" ></activity>
     </application>
 
 </manifest>

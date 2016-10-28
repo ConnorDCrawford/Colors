@@ -8,16 +8,17 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 /**
  * Created by connorcrawford on 9/27/16.
  */
 
 public class ColorArrayAdapter extends ArrayAdapter<ListColor> {
 
+    ListColor[] colors;
+
     public ColorArrayAdapter(Context context, ListColor[] listColorArray) {
         super(context, 0, listColorArray);
+        colors = listColorArray;
     }
 
     @NonNull
@@ -34,7 +35,7 @@ public class ColorArrayAdapter extends ArrayAdapter<ListColor> {
         // Lookup view for data population
         TextView textView = (TextView) convertView;
         // Populate the data into the template view using the data object
-        textView.setText(color.getName());
+        textView.setText(color.getName(getContext().getResources()));
         // Return the completed view to render on screen
         return convertView;
     }
